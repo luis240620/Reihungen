@@ -159,7 +159,18 @@ public class Maximumsuche extends PApplet
         //       Kommentiere die Maximumsuche
         // ------------------------------------------------------------------------------
         //<>//
-        return -1;
+        if (zahlen.length<=0)return-1;
+        
+        
+        int maxI=0;
+        for (int i = 0; i< zahlen.length; i++) {
+            if (zahlen[maxI]<zahlen[i]){
+                maxI=i;
+            }
+          
+        }
+        return maxI;
+
     }
 
     /**
@@ -167,7 +178,7 @@ public class Maximumsuche extends PApplet
      *
      */    
     public static void main(String _args[]){ 
-                PApplet.main(Maximumsuche.class, _args);
+        PApplet.main(Maximumsuche.class, _args);
     }
 
 }
